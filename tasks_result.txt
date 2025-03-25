@@ -1,0 +1,17 @@
+1. MySQL database connection is configured in `src/main/resources/application.properties`
+
+2. `src/main/resources/db_schema.sql` is extended with `INSERT INTO ... VALUES ...` queries to use test data
+
+3. RestController `src/main/java/siarhei/luskanau/sql/example/demo/TaskRestController.java` is added to invoke Repository with SQL queries and return JSON data
+
+4. Repository `src/main/java/siarhei/luskanau/sql/example/demo/TaskRepository.java` contains SQL queries
+
+5. Task 1 has "Feb 2020", so Feb can contain 28 or 29 days depends on the year. One of the solutions is `T_LOAN.disbursedon_date < '2020-03-01'` condition.
+Additionally, we can optimize query with another condition, but there is hardcoded date range: WHERE YEAR(T_LOAN.disbursedon_date) = 2020 AND MONTH(T_LOAN.disbursedon_date) IN (1, 2)
+
+6. Task 1a is implemented in TaskRepository class task1a() method.
+7. Task 1b is implemented in TaskRepository class task1b() method.
+8. Task 2 is implemented in TaskRepository class task2() method.
+9. Task 3 is implemented in TaskRepository class task3() method.
+
+10. Added unit tests
