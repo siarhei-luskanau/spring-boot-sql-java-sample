@@ -15,3 +15,9 @@ Additionally, we can optimize query with another condition, but there is hardcod
 9. Task 3 is implemented in TaskRepository class task3() method.
 
 10. Added unit tests
+
+11. Compile and Test maven tasks are launched in GitHub Actions, so there is a CI/CD process to check project quality on each commit/PullRequest.
+
+12. There is @SpringBootTest to check the Spring Boot configuration, as result MySql test database was prepared in GitHub Actions script.
+
+13. TODO: Move MySql credentials to the GitHub Actions secrets and environments to avoid hardcoded credentials from source code
