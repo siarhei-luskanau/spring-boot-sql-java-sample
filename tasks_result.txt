@@ -20,4 +20,4 @@ Additionally, we can optimize query with another condition, but there is hardcod
 
 12. There is @SpringBootTest to check the Spring Boot configuration, as result MySql test database was prepared in GitHub Actions script.
 
-13. TODO: Move MySql credentials to the GitHub Actions secrets and environments to avoid hardcoded credentials from source code
+13. Move MySql credentials to the GitHub Actions environments to avoid hardcoded credentials from source code
