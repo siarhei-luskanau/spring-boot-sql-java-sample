@@ -1,6 +1,6 @@
 1. MySQL database connection is configured in `src/main/resources/application.properties`
 
-2. `src/main/resources/db_schema.sql` is extended with `INSERT INTO ... VALUES ...` queries to use test data
+2. `/db_schema.sql` is extended with `INSERT INTO ... VALUES ...` queries to use test data
 
 3. RestController `src/main/java/siarhei/luskanau/sql/example/demo/TaskRestController.java` is added to invoke Repository with SQL queries and return JSON data
 
@@ -20,4 +20,4 @@ Additionally, we can optimize query with another condition, but there is hardcod
 
 12. There is @SpringBootTest to check the Spring Boot configuration, as result MySql test database was prepared in GitHub Actions script.
 
-13. Move MySql credentials to the GitHub Actions environments to avoid hardcoded credentials from source code
+13. Applied the Spring Boot Docker Compose Support to use the same environment for developers and GitHub Actions

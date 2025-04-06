@@ -6,16 +6,9 @@ jobs:
 
   Build_mvn:
     runs-on: ubuntu-latest
-    env:
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root
     steps:
 
       - uses: actions/checkout@v4
-
-      - run: |
-          sudo systemctl start mysql.service
-          mysql -e 'CREATE DATABASE test;' -uroot -proot
 
       - uses: actions/setup-java@v4
         with:
@@ -26,20 +19,15 @@ jobs:
 
   Build_gradle:
     runs-on: ubuntu-latest
-    env:
-      SPRING_DATASOURCE_USERNAME: root
-      SPRING_DATASOURCE_PASSWORD: root
     steps:
 
       - uses: actions/checkout@v4
-
-      - run: |
-          sudo systemctl start mysql.service
-          mysql -e 'CREATE DATABASE test;' -uroot -proot
 
       - uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: 17
+
+      - uses: gradle/actions/setup-gradle@v4
 
       - run: ./gradlew clean assemble test jar --stacktrace
