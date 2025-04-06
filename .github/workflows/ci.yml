@@ -4,7 +4,7 @@ on: [ push ]
 
 jobs:
 
-  Build:
+  Build mvn:
     runs-on: ubuntu-latest
     env:
       SPRING_DATASOURCE_USERNAME: root
@@ -23,3 +23,23 @@ jobs:
           java-version: 17
 
       - run: mvn clean compile test
+
+  Build gradle:
+    runs-on: ubuntu-latest
+    env:
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - run: |
+          sudo systemctl start mysql.service
+          mysql -e 'CREATE DATABASE test;' -uroot -proot
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 17
+
+      - run: ./gradlew clean compile test
