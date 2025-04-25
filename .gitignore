@@ -34,3 +34,4 @@ build/
 
 .gradle
 .kotlin
+/local.properties
