@@ -14,7 +14,7 @@ class DemoApplicationTests {
 
     @Container
     @ServiceConnection
-    static MySQLContainer<?> mySQLContainer = new MySQLContainer<>(DockerImageName.parse("mysql:latest"));
+    static MySQLContainer<?> mySQLContainer = new MySQLContainer<>(DockerImageName.parse("mysql:9.2.0"));
 
     @Test
     void contextLoads() {
