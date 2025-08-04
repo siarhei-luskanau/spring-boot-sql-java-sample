@@ -15,7 +15,7 @@
 	<name>demo</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<commons.csv>1.14.0</commons.csv>
+		<commons.csv>1.14.1</commons.csv>
 		<java.version>17</java.version>
 		<mysql>9.3.0</mysql>
 	</properties>
