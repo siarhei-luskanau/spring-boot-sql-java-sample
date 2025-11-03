@@ -17,7 +17,7 @@
 	<properties>
 		<commons.csv>1.14.1</commons.csv>
 		<java.version>17</java.version>
-		<mysql>9.4.0</mysql>
+		<mysql>9.5.0</mysql>
 	</properties>
 	<dependencies>
 		<dependency>
