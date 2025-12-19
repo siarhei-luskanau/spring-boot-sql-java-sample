@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '3.5.7'
+	id 'org.springframework.boot' version '4.0.1'
 	id 'java'
 }
 
@@ -15,14 +15,13 @@ repositories {
 dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-docker-compose'
 	implementation 'org.apache.commons:commons-csv:1.14.1'
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.data:spring-data-jdbc'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.boot:spring-boot-testcontainers'
-	testImplementation 'org.testcontainers:junit-jupiter'
-	testImplementation 'org.testcontainers:mysql'
+	testImplementation 'org.testcontainers:testcontainers-junit-jupiter'
+	testImplementation 'org.testcontainers:testcontainers-mysql'
 }
 
 test {
