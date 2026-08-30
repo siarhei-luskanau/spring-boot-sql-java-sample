@@ -3,16 +3,32 @@ updates:
   - package-ecosystem: "maven"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "quarterly"
+    groups:
+      maven:
+        patterns:
+          - "*"
   - package-ecosystem: "gradle"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "quarterly"
+    groups:
+      gradle:
+        patterns:
+          - "*"
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "quarterly"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
   - package-ecosystem: "docker-compose"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "quarterly"
+    groups:
+      docker-compose:
+        patterns:
+          - "*"
